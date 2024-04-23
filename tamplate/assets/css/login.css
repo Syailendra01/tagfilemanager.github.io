@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+body {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+}
+.dashImage {
+	position: absolute;
+	left: 2%;
+	width: 50%;
+	text-align: center;
+	justify-content: center;
+}
+
+.dashImage img {
+	width: 70%;
+	margin-left: 170px;
+}
+
+.dashLogin {
+	position: absolute;
+	right: 3%;
+	width: 700px;
+	text-align: center;
+}
+.dashLogin .dashLogo {
+	border: 3px solid #fe3e3e;
+	margin-top: 5px;
+	margin-left: 25%;
+	margin-bottom: 50px;
+	width: 50%;
+	border-radius: 10px;
+	padding: 20px 15px 20px 15px;
+}
+.dashLogin img {
+	width: 290px;
+	margin-bottom: 15px;
+	padding-bottom: 20px;
+	border-bottom: 2px solid;
+}
+
+button {
+	background-color: #c74747;
+	width: 200px;
+	height: 50px;
+	color: #fff;
+	font-size: 16px;
+	padding: 10px 45px;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.input-group {
+	position: relative;
+	margin: 20px 0;
+}
+
+.input-group label {
+	position: absolute;
+	top: 50%;
+	left: 28%;
+	transform: translateY(-50%);
+	font-size: 16px;
+	color: #000000;
+	padding: 0 5px;
+	pointer-events: none;
+	transition: 0.5s;
+}
+.input-group input {
+	width: 350px;
+	height: 50px;
+	font-size: 16px;
+	color: #000000;
+	padding: 0 20px;
+	background: transparent;
+	border: 1.2px solid #000000;
+	outline: none;
+	border-radius: 5px;
+}
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+	top: 0;
+	font-size: 14px;
+	background: #fff;
+}

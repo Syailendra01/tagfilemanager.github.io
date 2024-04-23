@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+body {
+	background: #fff6f6;
+	display: flex;
+}
+.sidebar {
+	position: sticky;
+	top: 20;
+	left: 0;
+	bottom: 0;
+	border-radius: 7px;
+	width: 100px;
+	height: 100vh;
+	padding: 0 1.7rem;
+	color: #000000;
+	overflow: hidden;
+	transition: all 0.5s linear;
+	background: #fff;
+}
+.sidebar:hover {
+	width: 280px;
+	transition: 0.5s;
+}
+.logo {
+	height: 100px;
+	padding-top: 45px;
+	margin-left: -18px;
+}
+.logo img {
+	width: 80px;
+	height: auto;
+}
+.menu {
+	height: 88%;
+	position: relative;
+	list-style: none;
+	padding: 0;
+	padding-top: 40px;
+}
+
+.menu li {
+	padding: 1rem;
+	margin: 8px 0;
+	border-radius: 8px;
+	transition: all 0.5s ease-in-out;
+}
+.menu li:hover {
+	background: #e0e0e058;
+}
+.menu a {
+	color: #000000;
+	font-size: 14px;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+.menu a span {
+	overflow: hidden;
+}
+menu a i {
+	font-size: 1.2rem;
+}
+.logout {
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	width: 100%;
+}
+
+/* main body section */
+.main--content {
+	position: relative;
+	background: #ebe9e9;
+	width: 100%;
+	padding: 1rem;
+}
+.header--wrapper img {
+	width: 50px;
+	height: 50px;
+	cursor: default;
+	border-radius: 50%;
+}
+.header--wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	background: #fff;
+	border-radius: 10px;
+	padding: 10px 2rem;
+	margin-bottom: 1rem;
+}
+
+.user-name {
+	display: flex;
+	align-items: center;
+	gap: 1;
+}
+.user-name span {
+	font-size: 15px;
+	border-right: 2px solid;
+	text-align: center;
+	margin-right: 45px;
+	padding-right: 20px;
+	padding-top: 5px;
+	width: 180px;
+	height: 35px;
+	letter-spacing: 0.5px;
+	color: red;
+}
+
+/* card--container */
+
+.card-container {
+	background: #fff;
+	padding: 1rem;
+	display: flex;
+	border-radius: 10px;
+}
+
+.button-input {
+	border-bottom: 2px solid;
+	display: flex;
+	position: absolute;
+	right: 3%;
+	top: 18.5%;
+	width: 21%;
+	height: 60px;
+}
+.button-Doc {
+	border-bottom: 2px solid;
+	display: flex;
+	position: absolute;
+	right: 3%;
+	top: 18.5%;
+	width: 10.5%;
+	height: 60px;
+}
+.button-input button {
+	border: 1px solid;
+	border-radius: 5px;
+	font-size: 15px;
+	width: 200px;
+	color: #000000;
+	height: 35px;
+	letter-spacing: 0.5px;
+	margin-left: 10px;
+	text-align: center;
+}
+.button-Doc button {
+	border: 1px solid;
+	border-radius: 5px;
+	font-size: 15px;
+	width: 200px;
+	color: #000000;
+	height: 35px;
+	letter-spacing: 0.5px;
+	text-align: center;
+}
+
+.card-container .linkBack {
+	position: relative;
+	display: grid;
+	width: 350px;
+	height: 70px;
+}
+.card-container .search-date input {
+	border: 1px solid;
+	border-radius: 5px;
+	width: 90%;
+	height: 50px;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.table-responsive .button-process {
+	margin-bottom: 30px;
+	padding-top: 10px;
+	width: 400px;
+	display: none;
+}
+.table-responsive .button-process button {
+	padding: 10px 15px;
+	text-decoration: none;
+	margin-right: 10px;
+	background: blue;
+	outline: none;
+	color: white;
+	border-radius: 4px;
+}
+
+/* Folder */
+
+.createFolder {
+	width: 35%;
+	height: 28%;
+	background-color: #fff;
+	border-radius: 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(22%, 32%) scale(0.1);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	padding: 0 30px 30px;
+	color: #333;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+.openFolder-popUp {
+	visibility: visible;
+	top: 35%;
+	transform: translate(-50%, -50%) scale(1);
+}
+.createFolder .buttonClose {
+	position: absolute;
+	right: 20px;
+	margin-top: 10px;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	font-size: 30px;
+	cursor: pointer;
+}
+.createFolder h3 {
+	margin-top: 30px;
+	margin-bottom: -10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid;
+}
+.createFolder .inputFolder {
+	position: relative;
+	top: 30px;
+	width: 100%;
+	height: 80%;
+	padding-top: 10px;
+	border-radius: 5px;
+	font-size: 15px;
+	color: #000000;
+}
+
+/* Document */
+.addDocument {
+	width: 45%;
+	height: 50%;
+	background-color: #fff;
+	border-radius: 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(29%, -5%) scale(0.1);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	padding: 0 30px 30px;
+	color: #333;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+.openDoc-popUp {
+	visibility: visible;
+	top: 45%;
+	transform: translate(-50%, -50%) scale(1);
+}
+.addDocument .buttonClose {
+	position: absolute;
+	right: 20px;
+	margin-top: 10px;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	font-size: 30px;
+	cursor: pointer;
+}
+.addDocument h3 {
+	margin-top: 30px;
+	margin-bottom: -10px;
+}
+.addDocument .inputDocument {
+	border: 1px solid;
+	position: relative;
+	top: 30px;
+	width: 100%;
+	height: 80%;
+	padding-top: 30px;
+	padding-left: 20px;
+	border-radius: 5px;
+	font-size: 15px;
+	color: #000000;
+}
+.addDocument .inputDocument .buttonInput {
+	margin: 30px 15px;
+}
+/* Action */
+
+.actionContent a,
+button {
+	color: black;
+	text-decoration: none;
+	background: transparent;
+}
+
+/* Edit */
+.popupEdit {
+	width: 40%;
+	height: 31%;
+	background-color: #fff;
+	border-radius: 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	padding: 0 30px 30px;
+	color: #333;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+.open-popupEdit {
+	visibility: visible;
+	top: 45%;
+	transform: translate(-50%, -50%) scale(1);
+}
+.popupEdit .buttonClose {
+	position: absolute;
+	right: 20px;
+	margin-top: 10px;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	font-size: 30px;
+	cursor: pointer;
+}
+.popupEdit h3 {
+	margin-top: 30px;
+	margin-bottom: -10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid;
+}
+.popupEdit .editFolder {
+	position: relative;
+	top: 30px;
+	width: 100%;
+	height: 80%;
+	padding-top: 10px;
+	border-radius: 5px;
+	font-size: 15px;
+	color: #000000;
+}
+
+.popupUpdate {
+	width: 45%;
+	height: 50%;
+	background-color: #fff;
+	border-radius: 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	padding: 0 30px 30px;
+	color: #333;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+.openUpdate-popUp {
+	visibility: visible;
+	top: 45%;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.popupUpdate .buttonClose {
+	position: absolute;
+	right: 20px;
+	margin-top: 10px;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	font-size: 30px;
+	cursor: pointer;
+}
+.popupUpdate h3 {
+	margin-top: 30px;
+	margin-bottom: -10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid;
+}
+.popupUpdate .editDocument {
+	border: 1px solid;
+	position: relative;
+	top: 30px;
+	width: 100%;
+	height: 80%;
+	padding-top: 30px;
+	padding-left: 20px;
+	border-radius: 5px;
+	font-size: 15px;
+	color: #000000;
+}
+
+.addUsers {
+	width: 45%;
+	height: 65%;
+	background-color: #fff;
+	border-radius: 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(31%, -13.5%) scale(0.1);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	padding: 0 30px 30px;
+	color: #333;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+.openUsers-popUp {
+	visibility: visible;
+	top: 45%;
+	transform: translate(-50%, -50%) scale(1);
+}
+.addUsers .buttonClose {
+	position: absolute;
+	right: 20px;
+	margin-top: 10px;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	font-size: 30px;
+	cursor: pointer;
+}
+.addUsers h3 {
+	margin-top: 30px;
+	margin-bottom: -10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid;
+}
+.addUsers .inputDocument {
+	width: 100%;
+	height: 80%;
+	padding-top: 30px;
+	padding-left: 22%;
+	font-size: 15px;
+	color: #000000;
+}
